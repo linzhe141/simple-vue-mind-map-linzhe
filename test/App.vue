@@ -2,6 +2,9 @@
   <div id="app">
     <mind-map
       :data="map"
+      :collapsable="true"
+      :showTool="false"
+      :expandall="true"
       width="1104"
       height="400"
       :show-reason="false"
@@ -71,7 +74,7 @@ export default {
     handleNodeDelete (nodeData, callback) {
       console.log(nodeData)
 
-      callback(false)
+      callback(true)
     }
   }
 }

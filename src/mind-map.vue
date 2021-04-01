@@ -1,6 +1,6 @@
 <template>
   <div ref="mind-map-item" class="mind-map-item">
-    <div class="tools">
+    <div class="tools" v-if="showTool">
       <div v-tooltip.bottom="'显示比例'" class="operation normal-icon" @click="toggleZoomSelector">
         <span>{{ Math.round(ratio * 100) }}%</span>
         <i ref="ratio-selector" class="icon simple-vue-mind-map icon_arrow_down" style="margin-left: 3px;font-size: 6px;vertical-align: middle;"></i>
@@ -45,6 +45,8 @@
           :direction="direction"
           :data="mapData"
           :render-content="handleRenderContent"
+          :show-collapsable="collapsable"
+          :default-expand-all="expandall"
           @node-click="handleNodeClick">
         </vue-okr-tree>
         <context-menu
@@ -76,7 +78,7 @@ Vue.use(VTooltip)
 
 export default {
   name: 'MindMap',
-  props: ['data', 'width', 'height', 'showReason', 'dataTemplate'],
+  props: ['data', 'width', 'height', 'showReason', 'dataTemplate', 'collapsable', 'expandall', 'showTool'],
   components: {
     VueOkrTree,
     ContextMenu

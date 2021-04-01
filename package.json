@@ -1,5 +1,5 @@
 {
-  "name": "simple-vue-mind-map",
+  "name": "simple-vue-mind-map-linzhe",
   "version": "0.1.9",
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/eniumeng/simple-vue-mind-map.git"
+    "url": "https://github.com/linzhe141/simple-vue-mind-map-linzhe.git"
   },
   "main": "lib/entry.js",
   "unpkg": "lib/simple-vue-mind-map.min.js",
   "module": "lib/simple-vue-mind-map.esm.js",
-  "author": "eniumeng@163.com",
+  "author": "linzhe141@qq.com",
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.12.1",
     "@babel/runtime": "^7.12.1",
